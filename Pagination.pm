@@ -8,20 +8,20 @@ use utf8;
 
 use Exporter qw(import);
 
-our @EXPORT_OK = qw(filter_posts_by_current_page get_pages_count make_paginator);
+our @EXPORT_OK = qw(filter_elements_by_current_page get_pages_count make_paginator);
 
 use POSIX qw(ceil);
 use List::Util qw(min);
 
-sub filter_posts_by_current_page($$$) {
-    my ($posts, $page_size, $current_page) = @_;
+sub filter_elements_by_current_page($$$) {
+    my ($elements, $page_size, $current_page) = @_;
 
-    my $posts_count = @$posts;
+    my $elements_count = @$elements;
     my $lower_bound = $current_page * $page_size;
-    my $upper_bound = min(($current_page + 1) * $page_size, $posts_count) - 1;
+    my $upper_bound = min(($current_page + 1) * $page_size, $elements_count) - 1;
 
     if ($lower_bound <= $upper_bound) {
-        my @xs = @$posts[$lower_bound .. $upper_bound];
+        my @xs = @$elements[$lower_bound .. $upper_bound];
         return \@xs;
     } else {
         return [];
