@@ -14,7 +14,7 @@ use File::Copy::Recursive qw(dircopy);
 
 our @EXPORT_OK = qw(single multiple pagination build);
 
-use Olyvova::Pagination qw(filter_posts_by_current_page get_pages_count make_paginator);
+use Olyvova::Pagination qw(filter_elements_by_current_page get_pages_count make_paginator);
 use Olyvova::Template qw(make_file_generator);
 
 use constant {
@@ -82,7 +82,7 @@ sub build_route {
 
             for (my $i = 0; $i < $pages_count; $i++) {
                 my $elements_on_page =
-                    filter_posts_by_current_page($elements, $page_size, $i);
+                    filter_elements_by_current_page($elements, $page_size, $i);
                 my $page_route = $transformer->($i, $pages_count, $elements_on_page);
                 build_route($file_generator, $page_route);
             }
