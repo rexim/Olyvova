@@ -29,9 +29,9 @@ sub filter_posts_by_current_page($$$) {
 }
 
 sub get_pages_count($$) {
-    my ($posts, $page_size) = @_;
-    my $posts_count = @$posts;
-    return ceil($posts_count / $page_size);
+    my ($elements, $page_size) = @_;
+    my $elements_count = @$elements;
+    return ceil($elements_count / $page_size);
 }
 
 sub make_paginator($$$) {
