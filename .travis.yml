@@ -1,0 +1,12 @@
+language: perl
+before_install:
+  - curl -L https://cpanmin.us | perl - App::cpanminus
+install:
+  - cpanm Switch File::Copy::Recursive DateTime DateTime::Format::RFC3339 DateTime::Format::Mail Text::Markdown Template
+script:
+  - perl Makefile.PL
+  - make
+  - make test
+notifications:
+  email:
+    - reximkut@gmail.com
