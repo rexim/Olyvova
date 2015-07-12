@@ -4,19 +4,6 @@
 
 Olyvova is a static blog generator that I use for my blog: http://rexim.me/
 
-## Dependencies ##
-
-- perl 5.10.1+
-- Switch
-- File::Copy::Recursive
-- DateTime
-- DateTime::Format::RFC3339
-- DateTime::Format::Mail
-- Text::Markdown
-- Template
-
-If I missed any dependencies here, please let me know.
-
 ## Usage ##
 
 Take a look at the source code of my blog: https://github.com/rexim/rexim.me
