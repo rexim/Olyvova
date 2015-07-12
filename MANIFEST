@@ -5,4 +5,7 @@ lib/Olyvova/Builder.pm
 lib/Olyvova/Pagination.pm
 LICENSE
 Makefile.PL
+t/posts/simple.md
+t/metadata.t
 README.md
+MANIFEST
