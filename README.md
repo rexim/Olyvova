@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rexim/Olyvova.svg?branch=master)](https://travis-ci.org/rexim/Olyvova)
+
 # Olyvova #
 
 Olyvova is a static blog generator that I use for my blog: http://rexim.me/
