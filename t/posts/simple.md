@@ -1,5 +1,5 @@
-hello: world
-foo: bar
+heLlo: world
+FOO: bar
 herp: derp
 
 Text
